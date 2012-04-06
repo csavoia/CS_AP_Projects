@@ -1,0 +1,73 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class number1 {
+	
+	int balance = 10;
+	
+	public static void main (String[] args) {
+		
+		System.out.println("Welcome to Roulette Light! What would you like to do?");
+		
+		//Call options function
+		option();
+		
+	}
+	
+	public static void option(){
+		Scanner in = new Scanner(System.in); 
+
+		System.out.println("\n1- Play 2 - Exit");
+		
+		int selection = in.nextInt();
+		
+		if(selection == 1){
+			play();
+		}
+		if(selection == 2){
+			exit();
+		}
+
+	}
+	
+	public static void play(){
+		Scanner in = new Scanner(System.in); 
+
+		System.out.println("Please input a number");
+		
+		int numberPicked = in.nextInt();
+		
+		if( numberPicked%2 == 0 )
+		{
+			//boolean even = true;
+			System.out.println("Balls");
+		}
+		
+		else
+		{
+			boolean odd = true;
+		}
+		
+		int rouletteTime = (int) Math.random() * 10 + 10;
+		System.out.println(rouletteTime);
+		
+		for( int i = 0; i < rouletteTime; i++){
+			System.out.println(Math.random());
+			try
+			{
+			  	 //pause for 1000 ms = 1 second
+			  	 Thread.currentThread().sleep(1000);
+			}
+			catch(InterruptedException ie){}
+		}
+		
+	}
+	
+	public static void exit(){
+		System.out.println("\nGoodbye");
+	}
+	
+	public static void roll(){
+		
+	}
+}

@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class number1 {
+	public static void main(String[] args){
+				
+		while(true){
+			Scanner in = new Scanner(System.in);
+			System.out.println("Please enter a binary number to convert to an integer. Entry must consist of 1s and 0s to work properly.");
+			
+			//Accept input for string that will convert to array
+			String binaryInput = in.nextLine();
+			
+			//Binary string to array
+			char[] binaryArray = binaryInput.toCharArray();
+			
+			//Create variable for integer (set to 0 for when it loops)
+			double binaryConverted = 0;
+		
+			for( int i=0; i < binaryArray.length; i++){
+
+				//if string value is 0
+				if( binaryArray[i] == '0'){
+					
+				}
+				//if string value is 1
+				if( binaryArray[i] == '1'){
+					binaryConverted = binaryConverted + Math.pow(2, binaryArray.length - i -1);
+
+				}
+				//error catcher
+				else{
+					boolean error = true;
+
+					System.out.println("You have entered an invalid numeric value. Please only enter 1s and 0s.");
+					
+					i = binaryArray.length;
+					
+				}
+								
+			}
+			
+			System.out.println(binaryInput + " is " + (int)binaryConverted + " in integer form.\n");
+
+		}
+	}
+}

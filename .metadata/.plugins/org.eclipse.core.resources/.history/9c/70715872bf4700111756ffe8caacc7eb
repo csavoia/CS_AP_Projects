@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class number1 {
+	public static void main(String[] args){
+		
+		double binaryConverted = 0;
+		
+		while(true){
+			Scanner in = new Scanner(System.in);
+			System.out.println("Please enter a binary number to convert to an integer. Entry must consist of 1s and 0s to work properly.");
+			
+			//Accept input for string that will convert to array
+			String binaryInput = in.nextLine();
+			
+			//Binary string to array
+			char[] binaryArray = binaryInput.toCharArray();
+		
+			for( int i=0; i < binaryArray.length; i++){
+
+				if( binaryArray[i] == '0'){
+					System.out.println("Zero");
+
+				}
+				if( binaryArray[i] == '1'){
+					binaryConverted = binaryConverted + Math.pow(2, binaryArray.length - i -1);
+					System.out.println((int)binaryConverted);
+				}
+				
+				
+			}
+		}
+	}
+}

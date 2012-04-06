@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+class Bank{
+	
+	String bankName;
+	double balance;
+	
+	public Bank(String bankName, double balance){
+		bankName = bankName;
+		balance = balance;
+	}
+	
+	public static void getBalance(){
+		
+	}
+	
+}
+public class project2 {
+
+}

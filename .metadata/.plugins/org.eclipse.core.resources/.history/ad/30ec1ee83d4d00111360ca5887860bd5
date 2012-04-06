@@ -1,0 +1,115 @@
+import java.util.*;
+
+class BankAccount{
+
+	public String username;
+	public int balance;
+	public static String bankName;
+	public static double interestRate;
+	
+	//default constructor
+	public BankAccount(){
+		username = "Anonymous";
+		balance = 0;
+		bankName = "Bank of Carlo";
+		interestRate = 2.5;
+	}
+	
+	//constructor
+	public BankAccount( String newUsername, int newBalance, String newBankName, double newInterestRate ){
+		username = newUsername;
+		balance = newBalance;
+		bankName = newBankName;
+		interestRate = newInterestRate;	
+	}
+	
+	public void deposit(int depositAmount) {
+		balance += depositAmount;
+	}
+	public void withdraw(int withdrawAmount) {
+		balance -= withdrawAmount;
+	}
+	public void username(String newUsername) {
+		username = newUsername;
+	}
+	public void bank(String newBank) {
+		bankName = newBank;
+	}
+	public void interest(int interestChange) {
+		interestRate = interestChange;
+	}
+	
+	public String toString() {
+		return username + ", $" + balance + ", " + bankName + ", " + interestRate + "%";
+	}
+
+}
+
+public class banking {
+
+	public static void main(String[] args){
+
+		Scanner in = new Scanner(System.in);
+		
+		while(true){
+			
+		BankAccount[] customer = new BankAccount[3];
+		customer[0] = new BankAccount();
+		customer[1] = new BankAccount( "Alex", 40000, "Amazing Bank", 3.0);
+		customer[2] = new BankAccount( "Bob", 2500, "Bob's Bank", 20.25);
+
+		//display main info
+		for( int i = 0; i < customer.length; i++){
+			System.out.println( "User " + (i+1) + ": " + customer[i] + "\n");
+			
+		}
+		
+		//ask which user to edit
+		System.out.println("What user would you like to view/edit?");
+		int customerNumber = in.nextInt();
+		
+		while( customerNumber == 1){
+			 
+			System.out.println("You have chosen to edit customer " + customerNumber + ".\n");
+			//display customer info
+			System.out.println( customer[customerNumber] + "\n" + "What would you like to do?\n1. Deposit Money\n2. Withdraw Money\n3. Change Name\n4. Change Bank Name\n5. Change Interest Rate\n6. Main Menu\n");
+			
+			int menuSelection = in.nextInt();
+			
+			//deposit
+			if(menuSelection == 1){
+				System.out.println("How much would you like to deposit?");
+				int depositValue = in.nextInt();
+				customer[customerNumber].deposit(depositValue);
+			}
+			//withdraw
+			if(menuSelection == 2){
+				System.out.println("How much would you like to withdraw?");
+				int withdrawValue = in.nextInt();
+				customer[customerNumber].withdraw(withdrawValue);
+			}
+			//ERROR ERROR ERROR
+			if(menuSelection == 3){
+				System.out.println("What would you like to change this user's name to?");
+				String newUsername = in.nextLine();
+				customer[customerNumber].username(newUsername);
+			}
+			//bank name
+			if(menuSelection == 4){
+				System.out.println("What would you like to change this user's bank to?");
+				String newBank = in.nextLine();
+				customer[customerNumber].bank(newBank);
+			}
+			if(menuSelection == 5){
+				System.out.println("What would you like to change the interest rate to?");
+				int interestChange = in.nextInt();
+				customer[customerNumber].interest(interestChange);
+			}
+			if(menuSelection == 6){
+				customerNumber = 0;
+			}
+		}
+		
+		}
+	}
+}

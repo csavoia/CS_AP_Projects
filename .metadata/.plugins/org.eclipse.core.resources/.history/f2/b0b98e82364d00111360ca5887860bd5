@@ -1,0 +1,58 @@
+class BankAccount{
+
+	public String username;
+	public int balance;
+	public static String bankName;
+	public double interestRate;
+	
+	//default constructor
+	public BankAccount(){
+		username = "Anonymous";
+		balance = 0;
+		bankName = "Bank of Carlo";
+		interestRate = 2.5;
+	}
+	
+	//constructor
+	public BankAccount( String newUsername, int newBalance, String newBankName, double newInterestRate ){
+		username = newUsername;
+		balance = newBalance;
+		bankName = newBankName;
+		interestRate = newInterestRate;	
+	}
+	
+	public void deposit(int depositAmount) {
+		balance += depositAmount;
+	}
+	
+	public String toString() {
+		return username + ", " + balance + ", " + bankName + ", " + interestRate;
+	}
+
+}
+
+public class banking {
+
+	public static void main(String[] args){
+
+		while(true){
+		BankAccount[] customer = new BankAccount[3];
+		customer[0] = new BankAccount();
+		customer[1] = new BankAccount( "Alex", 40000, "Amazing Bank", 3.0);
+		customer[2] = new BankAccount( "Bob", 2500, "Bob's Bank", 20.25);
+
+		for( int i = 0; i < customer.length; i++){
+			System.out.println(customer[i] + "\n");
+		}
+		
+		}
+	
+	}
+}
+
+
+int customerToChange;
+...
+customerNumber = scannerIntNext;
+
+customer[customerNumber].deposit(depositAmount)

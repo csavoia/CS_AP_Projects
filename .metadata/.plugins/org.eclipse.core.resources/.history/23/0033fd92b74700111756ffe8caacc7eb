@@ -1,0 +1,13 @@
+import java.io.*;
+
+public class number1 {
+	public static void main(String[] args){
+		
+		while(true){
+			Scanner in = new Scanner(System.in);
+			System.out.println("Please enter a binary string to convert to an integer.");
+		
+			
+		}
+	}
+}

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+
+public class number2 {
+
+	int decimalToBinary = int.nextInt();
+	
+	public static void main(String[] args) {
+
+		//initialize scanner
+		Scanner in = new Scanner(System.in); 
+
+
+	}
+
+}

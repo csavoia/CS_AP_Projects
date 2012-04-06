@@ -1,0 +1,107 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class number1 {
+	
+	public static void main (String[] args) {
+		
+		System.out.println("Welcome to Roulette Light! What would you like to do?");
+		
+		//Call options function
+		
+		option();
+		
+	}
+	
+	public static void option(){
+		Scanner in = new Scanner(System.in); 
+
+		System.out.println("\n1- Play 2 - Exit");
+		
+		int selection = in.nextInt();
+		
+		if(selection == 1){
+			play();
+		}
+		if(selection == 2){
+			exit();
+		}
+
+	}
+	
+	public static void play(){
+		Scanner in = new Scanner(System.in); 
+		
+		int balance = 10;
+		
+		boolean even;
+		boolean odd;
+
+		System.out.println("Please input a number");
+		
+		int numberPicked = in.nextInt();
+		
+		if( numberPicked%2 == 0 )
+		{
+			even = true;
+		}
+		
+		else
+		{
+			odd = true;
+		}
+		
+		int rouletteTime = (int)(10.0 * Math.random()) + 10;
+		System.out.println(rouletteTime);
+		
+		for( int i = 0; i < rouletteTime; i++){
+			int rouletteNumber = (int)(Math.random()*10 + 1);
+			
+			try
+			{
+			  	 //pause for 1000 ms = 1 second
+			  	 Thread.currentThread().sleep(1);
+			  	 System.out.println("\n" + rouletteNumber);
+			}
+			catch(InterruptedException ie){}
+			
+			if( i == (rouletteTime - 1)){
+				
+				if( rouletteNumber == numberPicked){
+					balance = balance + 11;
+					System.out.println("\nYou picked the same number! You now have " + balance);
+					
+				}
+			}
+			
+			if( i == (rouletteTime - 1)){
+				if( rouletteNumber%2 == 0){
+					if( numberPicked%2 == 0){
+						balance = balance + 2;
+						System.out.println("\nYour now have " + balance);
+					}
+				}
+			}
+			
+			if( i == (rouletteTime - 1)){
+				if( rouletteNumber%2 != 0){
+					if( numberPicked%2 != 0){
+						balance = balance + 2;
+						System.out.println("\nYou now have " + balance);
+					}
+				}
+			}
+			
+		}
+		
+		
+	}
+	
+	public static void exit(){
+		System.out.println("\nGoodbye");
+	}
+	
+	public static void roll(){
+		
+	}
+}

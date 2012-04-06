@@ -1,0 +1,13 @@
+class Bank{
+	
+	String userName;
+	
+	public Bank(String userName){
+		userName = userName;
+	}
+}
+public class project2v2 {
+	Bank[] user = new Bank[1]{
+	user[0] = new Bank("test");
+	}
+}

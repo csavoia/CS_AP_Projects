@@ -1,0 +1,43 @@
+class information{
+
+	public String username;
+	public int balance;
+	public static String bankName;
+	public static double interestRate;
+	
+	//default constructor
+	public information(){
+		username = "Anonymous";
+		balance = 0;
+		bankName = "Bank of Carlo";
+		interestRate = 2.5;
+	}
+	
+	//constructor
+	public information( String newUsername, int newBalance, String newBankName, double newInterestRate ){
+		username = newUsername;
+		balance = newBalance;
+		bankName = newBankName;
+		interestRate = newInterestRate;	
+	}
+	
+	public void displayInfo(){
+		
+		System.out.println( username + "\n" + balance + "\n" + bankName + "\n" + interestRate );
+		
+	}
+
+}
+public class banking {
+	
+	information[];
+	
+	public static void main(String[] args){
+
+		information[] customer = new information[3];
+		customer[0] = new information();
+		customer[1] = new information( "Alex", 40000, "Amazing Bank", 3.0);
+		customer[2] = new information( "Bob", 2500, "Bob's Bank", 20.25);
+	
+	}
+}

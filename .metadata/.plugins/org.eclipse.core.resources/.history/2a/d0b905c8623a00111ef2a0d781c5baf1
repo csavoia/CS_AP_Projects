@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+
+public class number2 {
+	
+	int decimalToBinary;
+	float binary;
+	
+	public static void main(String[] args) {
+
+		//initialize scanner
+		Scanner in = new Scanner(System.in); 
+		
+		System.out.println("Please input a number between 1 and 1023 to convert to binary.");
+		
+		//input to convert
+		int inputToBinary = in.nextInt();
+		
+		while (inputToBinary > 0){
+			System.out.println( inputToBinary/2 % 2);
+			inputToBinary = inputToBinary/2;
+			
+			binary = "";
+		}
+	}
+
+}

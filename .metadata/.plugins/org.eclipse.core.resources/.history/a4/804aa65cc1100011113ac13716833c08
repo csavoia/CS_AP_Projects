@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class number1 {
+	
+	int balance = 10;
+	
+	public static void main (String[] args){
+		
+		System.out.println("Welcome to Roulette Light! What would you like to do?");
+		
+		//Call options function
+		option();
+		
+	}
+	
+	public static void option(){
+		System.out.println("fuck");
+	}
+}

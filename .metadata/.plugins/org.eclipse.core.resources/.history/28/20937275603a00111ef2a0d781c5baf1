@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+
+public class number2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		//initialize scanner
+		Scanner in = new Scanner(System.in); 
+
+
+	}
+
+}

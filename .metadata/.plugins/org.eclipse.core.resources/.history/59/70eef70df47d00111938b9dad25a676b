@@ -1,0 +1,11 @@
+class Bank{
+	
+	String userName;
+	
+	public Bank(String userName){
+		
+	}
+}
+public class project2v2 {
+
+}

@@ -1,0 +1,21 @@
+import java.util.*;
+
+class Bank{
+	
+	public String userName;
+	
+	public Bank(){
+		userName = "bob";
+	}
+	public Bank(String userName){
+		userName = userName;
+	}
+}
+public class project2v2 {
+	public static void main(String[] args){
+		Bank[] user = new Bank[1];
+		user[0] = new Bank();
+		
+		System.out.println(user[0]);
+	}
+}

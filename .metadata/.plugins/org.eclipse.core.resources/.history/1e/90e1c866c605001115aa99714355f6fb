@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class number1 {
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in); 
+		
+		System.out.println("\nWelcome to Carlosoft Arrays 2012. Please choose an option\n");
+		
+		int selection = 0;
+		
+		while(selection == 0){
+		System.out.println("1- Count forward and back\n2- User input for values\n3- Custom array size\n4- Random number array\n5- Random number array with number searching\n6- Exit\n ");
+		{
+			selection = in.nextInt();
+			
+			if(selection == 1){
+				
+			}
+		}
+	
+	}
+		
+}
+	public static void option1(){
+		
+	}
+	
+}

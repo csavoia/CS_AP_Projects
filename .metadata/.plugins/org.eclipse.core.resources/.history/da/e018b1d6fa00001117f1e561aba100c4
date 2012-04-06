@@ -1,0 +1,11 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class number1 {
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in); 
+		
+		System.out.println("Welcome to Carlosoft Arrays 2012. Please choose an option");
+		System.out.println("1- Count forward and back.\nUser input array\n");
+	}
+}

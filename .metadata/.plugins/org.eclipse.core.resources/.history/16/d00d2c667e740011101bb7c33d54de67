@@ -1,0 +1,4 @@
+public void trimSilenceFromBeginning(){
+	for( int i = samples.size(); i>=0; i--){
+
+}

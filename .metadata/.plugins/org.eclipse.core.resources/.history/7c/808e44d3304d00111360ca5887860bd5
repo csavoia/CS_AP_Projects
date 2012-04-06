@@ -1,0 +1,15 @@
+class information{
+
+	public String username;
+	public int balance;
+	public String bankName;
+	public double interestRate;
+	
+	public information(){
+		
+	}
+
+}
+public class banking {
+
+}

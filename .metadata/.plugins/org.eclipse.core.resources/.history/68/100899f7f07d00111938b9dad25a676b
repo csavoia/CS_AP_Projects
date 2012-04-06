@@ -1,0 +1,75 @@
+import java.util.*;
+
+class BankAccount{
+
+	public String username;
+	public int balance;
+	public int accountNumber;
+	public static String bankName;
+	public static double interestRate;
+	public static String expirationDate;
+	public static double monthlyFee;
+	
+	//default constructor
+	public BankAccount(){
+		username = "Anonymous";
+		balance = 40200;
+		accountNumber = 0;
+		bankName = "Bank of Carlo";
+		interestRate = 2.5;
+		expirationDate = "5/07/2012";
+		monthlyFee = 20;
+	}
+	
+	//constructor
+	public BankAccount( String newUsername, int newBalance, int newAccountNumber, String newBankName, double newInterestRate, String newExpirationDate, double newMonthlyFee ){
+		username = newUsername;
+		balance = newBalance;
+		accountNumber = newAccountNumber;
+		bankName = newBankName;
+		interestRate = newInterestRate;
+		expirationDate = newExpirationDate;
+		monthlyFee = newMonthlyFee;
+	}
+	
+	public void deposit(int depositAmount) {
+		balance += depositAmount;
+	}
+	public void withdraw(int withdrawAmount) {
+		balance -= withdrawAmount;
+	}
+	public void username(String newUsername) {
+		username = newUsername;
+	}
+	public void bank(String newBank) {
+		bankName = newBank;
+	}
+	public void interest(double interestChange) {
+		interestRate = interestChange;
+	}
+	
+	public String toString() {
+		return username + ", $" + balance + ", " + bankName + " bank, " + interestRate + "% interest rate";
+	}
+
+}
+
+public class project2 {
+
+	public static void main(String[] args){
+
+		Scanner in = new Scanner(System.in);
+		
+		BankAccount[] accountType = new BankAccount[3];
+		accountType[0] = new BankAccount( "csavoia", 10000000, 1949, "Bank of Carlo", 1.2, "9/20/2014", 30);
+		accountType[1] = new BankAccount( "carlopds", 32000000, 291, "Bank of Carlo", .9, "2/1/2030", 10);
+		accountType[2] = new BankAccount( "cpds", 177000000, 29422, "Bank of Carlo", 2.3, "5/1/2016", 120);
+
+		//while(true){
+		
+		//display main info
+		System.out.println("Checking Account Info:", accountType[0]);
+		
+		//}
+	}
+}

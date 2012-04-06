@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+class Bank{
+	
+	String bankName;
+	
+	public Bank(String bankName){
+		bankName = bankName;
+	}
+	
+	public static void getBalance{
+		
+	}
+	
+}
+public class project2 {
+
+}

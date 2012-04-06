@@ -1,0 +1,26 @@
+class information{
+
+	public String username;
+	public int balance;
+	public static String bankName;
+	public static double interestRate;
+	
+	public information(){
+		
+		username = "Anonymous";
+		balance = 0;
+		bankName = "Bank of Carlo";
+		interestRate = 2.5;
+		
+	}
+	
+	public information( String udpatedUsername, int newBalance, String newBankName, double newInterestRate ){
+		
+		username = newUsername;
+		
+	}
+
+}
+public class banking {
+
+}

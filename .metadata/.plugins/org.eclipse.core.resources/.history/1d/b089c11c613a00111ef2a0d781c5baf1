@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+
+public class number2 {
+	
+	int decimalToBinary;
+	
+	public static void main(String[] args) {
+
+		//initialize scanner
+		Scanner in = new Scanner(System.in); 
+		
+		//input to convert
+		int inputToBinary = in.nextInt();
+		
+	}
+
+}

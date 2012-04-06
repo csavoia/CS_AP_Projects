@@ -1,0 +1,26 @@
+
+public class HelloWorldApp // class MUST be same name as filename
+{
+	public static void main( String[] args)
+	{
+		// where program begins
+			// init a variable
+		int x;
+		x = 7; 	// value to a variable
+		
+		// print variable
+		System.out.println("this is x:" + x);
+		
+		//conditionals <, >, <=, >=, ==, !=
+		if(x==7)
+		{
+			// print mv
+			System.out.println("mv");
+		}
+		else
+		{
+			// print la
+			System.out.println("la");
+		}
+	}
+}

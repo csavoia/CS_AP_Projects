@@ -1,0 +1,12 @@
+class information{
+
+	String username;
+	
+	public information(){
+		
+	}
+
+}
+public class banking {
+
+}

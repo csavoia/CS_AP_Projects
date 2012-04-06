@@ -1,0 +1,161 @@
+import java.util.Scanner;
+
+class student {
+
+	// declare variables
+	public char gender;
+	public String firstName;
+	public String lastName;
+	public int gradeLevel;
+	public int studentID;
+	public int phoneNumber;
+	public String address;
+	public String city;
+	public int zip;
+
+	// constructor
+	public student(char gender, String firstName, String lastName,
+			int gradeLevel, int studentID, int phoneNumber, String address,
+			String city, int zip) {
+
+		this.gender = gender;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.gradeLevel = gradeLevel;
+		this.studentID = studentID;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+		this.city = city;
+		this.zip = zip;
+
+	}
+
+//////Gender functions do not exist because gender does not change
+	
+	// firstName functions
+	public void modifyStudent1() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Edit first name...\n");
+		firstName = in.nextLine();
+		
+		students2.student1();
+	}
+
+	
+}
+
+public class students2 {
+	
+	public static student st1;
+	public static student st2;
+	public static student st3;
+
+	public static void main(String[] args) throws Exception {
+		
+		st1 = new student('M', "Albert", "Bosheenaw", 9, 10527, 8675309, "Bob Lane", "Compton", 94040);
+		st2 = new student('F', "Babella", "Baracci", 11, 20394, 6953943, "Berella Lane", "San Francisco", 94052);
+		st3 = new student('M', "Calvin", "Klein", 12, 20492, 6842939, "Kitten Street", "Las Vegas", 22512);
+
+
+		while (true) {
+			menu();
+		}
+
+	}
+
+	public static void menu() {
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("\nWelcome to Carlosoft Student Management System 2012. You have three active students.\n1. " + st1.firstName + "\n2. " + st2.firstName + "\n3. " + st3.firstName + "\nType a number 1-3 to see their information.\n");
+
+		int studentChoice = in.nextInt();
+
+		if (studentChoice == 1) {
+			student1();
+		}
+		if (studentChoice == 2) {
+			student2();
+		}
+		if (studentChoice == 3) {
+			student3();
+		} 
+		else if( studentChoice < 1 && studentChoice > 3) {
+			System.out.println("Please pick a valid number from 1-3.");
+			studentChoice = in.nextInt();
+		}
+	}
+
+	public static void student1() {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("\nYou have selected student 1.\n");
+
+		System.out.println("Gender: " + st1.gender);
+		System.out.println("First name: " + st1.firstName);
+		System.out.println("Last name: " + st1.lastName);
+		System.out.println("Grade level: " + st1.gradeLevel);
+		System.out.println("Student ID number: " + st1.studentID);
+		System.out.println("Phone number: " + st1.phoneNumber);
+		System.out.println("Address: " + st1.address);
+		System.out.println("City: " + st1.city);
+		System.out.println("ZIP code: " + st1.zip);
+		
+		System.out.println("\n\nWould you like to update any information? If so, what?\n1. First Name\n2. Last Name\n3. Grade Level\n4. Student ID Number\n5. Phone Number\n6. Address\n7. City\n8. Zip Code\n9- Menu");
+
+		int modifyField = in.nextInt();
+		
+		if( modifyField == 1){
+			st1.modifyStudent1( firstName );
+			System.out.println("You have edited the student's first name to " + st1.firstName);
+		}
+		if( modifyField == 2){
+			st1.modifyLastName1();
+		}
+		if( modifyField == 3){
+			st1.modifyGradeLevel1();
+		}
+		if( modifyField == 4){
+			st1.modifyStudentID1();
+		}
+		
+		menu();
+	}
+
+	public static void student2() {
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("\nYou have selected student 2.\n");
+
+		System.out.println("Gender: " + st2.gender);
+		System.out.println("First name: " + st2.firstName);
+		System.out.println("Last name: " + st2.lastName);
+		System.out.println("Grade level: " + st2.gradeLevel);
+		System.out.println("Student ID number: " + st2.studentID);
+		System.out.println("Phone number: " + st2.phoneNumber);
+		System.out.println("Address: " + st2.address);
+		System.out.println("City: " + st2.city);
+		System.out.println("ZIP code: " + st2.zip);
+		
+		System.out.println("\nWould you like to update any information? If so, what?\n1. First Name\n2. Last Name\n3. Grade Level\n4. Student ID Number\n5. Phone Number\n6. Address\n7. City\n8. Zip Code\n9- Menu");
+	}
+
+	public static void student3() {
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("\nYou have selected student 3.\n");
+
+		System.out.println("Gender: " + st3.gender);
+		System.out.println("First name: " + st3.firstName);
+		System.out.println("Last name: " + st3.lastName);
+		System.out.println("Grade level: " + st3.gradeLevel);
+		System.out.println("Student ID number: " + st3.studentID);
+		System.out.println("Phone number: " + st3.phoneNumber);
+		System.out.println("Address: " + st3.address);
+		System.out.println("City: " + st3.city);
+		System.out.println("ZIP code: " + st3.zip);
+		
+		System.out.println("\nWould you like to update any information? If so, what?\n1. First Name\n2. Last Name\n3. Grade Level\n4. Student ID Number\n5. Phone Number\n6. Address\n7. City\n8. Zip Code\n9- Menu");
+
+	}
+
+}

@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+
+public class number2v2 {
+		
+	public static void main(String[] args) {
+			intro();
+	}
+	
+	public static void intro(){
+		System.out.println("Please enter a value between 1 and 1023 to convert to binary.");
+		converToBinary();
+	}
+	
+	public static void converToBinary(){
+		
+	Scanner in = new Scanner(System.in); 
+
+		
+	String binaryStr = ""; // This string will hold the result
+		
+		//input to convert
+		int inputNumber = in.nextInt();
+		
+		if(inputNumber > 1023 || inputNumber <= 0){
+			error();
+		}
+		while (inputNumber > 0 && inputNumber <= 1023 ){
+			binaryStr = (inputNumber % 2) + binaryStr;
+			inputNumber = inputNumber/2;
+		}
+		System.out.println(binaryStr);
+		
+		intro();
+	}
+	
+	public static void error(){
+		System.out.println("You have entered an invalid value.");
+	}
+}

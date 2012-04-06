@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+
+public class number2 {
+		
+	public static void main(String[] args) {
+
+		//initialize scanner
+		Scanner in = new Scanner(System.in); 
+		
+		System.out.println("Please input a number between 1 and 1023 to convert to binary.");
+		
+		String binaryStr = ""; // This string will hold the result
+		
+		//input to convert
+		int inputNumber = in.nextInt();
+		
+		while (inputToNumber > 0 ){
+			binaryStr = (inputToBinary % 2) + binaryStr;
+			inputNumber = inputToBinary/2;
+		}
+		System.out.println(binaryStr);
+	}
+
+}
