@@ -12,6 +12,8 @@ class myBug extends Bug
 {
 
   private boolean found = false;
+  private myBug otherBug1;
+  private myBug otherBug2;
 
   /**
    * Create a Bug
@@ -20,6 +22,15 @@ class myBug extends Bug
   public myBug(Color bugColor)
   {
 	   super(bugColor);
+	   
+  }
+  
+  public void addOthers( myBug o1, myBug o2) {
+
+    this.otherBug1 = o1;
+
+    this.otherBug2 = o2;
+
   }
 
   /**
@@ -28,6 +39,7 @@ class myBug extends Bug
   public void act()
   {
 
+	  
 	   //get the grid of this object
 	   Grid<Actor> grid = this.getGrid();
 
@@ -44,10 +56,12 @@ class myBug extends Bug
 		   //get object description
 		   String objectDescription = x.toString();
 		   
-		   //see if it contains the string for yellow
+		   //see if it contains the string for yellow - check for gold rock
 		   if( objectDescription.contains("r=255,g=255,b=0") )
 		   {
 			   found = true;
+			   otherBug1.removeSelfFromGrid();
+			   otherBug2.removeSelfFromGrid();
 		   }
 	   }
 	   
@@ -56,8 +70,7 @@ class myBug extends Bug
 	   if( found == false )
 	   {
 		   //get a list of available locations
-		   ArrayList<Location> validLocations =
-grid.getEmptyAdjacentLocations(currentLocation);
+		   ArrayList<Location> validLocations = grid.getEmptyAdjacentLocations(currentLocation);
 		    
 		   //pick a random location
 		   int randLocation = (int) (Math.random() * validLocations.size());
@@ -83,9 +96,9 @@ public class test
 		Location bug2location = new Location(9, 0);
 		myBug bug3 = new myBug(Color.RED);
 		Location bug3location = new Location(0, 9);
-		//bug1.addOthers(bug2, bug3);
-		//bug2.addOthers(bug1, bug3);
-		//bug3.addOther(bug1, bug2);
+		bug1.addOthers(bug2, bug3);
+		bug2.addOthers(bug1, bug3);
+		bug3.addOthers(bug1, bug2);
 		
 		//setup a rock
 		Rock rock1 = new Rock();
